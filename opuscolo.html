@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+
+<title>Opuscolo – Due Passi in Paradiso</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SWIPER -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<style>
+
+/* BASE */
+body {
+  margin: 0;
+  background: #020617;
+  font-family: system-ui;
+  color: white;
+}
+
+/* CONTENITORE */
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* SWIPER */
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PAGINE */
+.page-single img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.page-double {
+  display: flex;
+  gap: 10px;
+}
+
+.page-double img {
+  width: 50%;
+  border-radius: 12px;
+}
+
+/* MOBILE → sempre singola */
+@media (max-width: 768px) {
+  .page-double {
+    flex-direction: column;
+  }
+  .page-double img {
+    width: 100%;
+  }
+}
+
+/* BOTTONI */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- SWIPER -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+
+    <!-- COVER -->
+    <div class="swiper-slide page-single">
+      <img src="files/opuscolo/cover_front.jpg">
+    </div>
+
+    <!-- PAGINE DOPPIE -->
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_02.jpg">
+      <img src="files/opuscolo/page_03.jpg">
+    </div>
+
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_04.jpg">
+      <img src="files/opuscolo/page_05.jpg">
+    </div>
+
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_06.jpg">
+      <img src="files/opuscolo/page_07.jpg">
+    </div>
+
+    <!-- PAGINA CENTRALE -->
+    <div class="swiper-slide page-single">
+      <img src="files/opuscolo/spread_08.jpg">
+    </div>
+
+    <!-- ALTRE DOPPIE -->
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_09.jpg">
+      <img src="files/opuscolo/page_10.jpg">
+    </div>
+
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_11.jpg">
+      <img src="files/opuscolo/page_12.jpg">
+    </div>
+
+    <div class="swiper-slide page-double">
+      <img src="files/opuscolo/page_13.jpg">
+      <img src="files/opuscolo/page_14.jpg">
+    </div>
+
+    <!-- BACK -->
+    <div class="swiper-slide page-single">
+      <img src="files/opuscolo/cover_back.jpg">
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <a class="home-btn" href="index.html">← Torna alla home</a>
+</div>
+
+</div>
+
+<!-- SCRIPT SWIPER -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+new Swiper('.swiper', {
+  loop: false,
+  spaceBetween: 20,
+});
+</script>
+
+</body>
+</html>
