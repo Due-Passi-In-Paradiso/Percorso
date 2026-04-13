@@ -7,6 +7,11 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
+<!-- PRECARICAMENTO IMMAGINI PIÙ IMPORTANTI -->
+<link rel="preload" as="image" href="files/opuscolo/cover_front.jpg">
+<link rel="preload" as="image" href="files/opuscolo/page_02.jpg">
+<link rel="preload" as="image" href="files/opuscolo/page_03.jpg">
+
 <style>
 html, body {
   margin: 0;
@@ -126,30 +131,111 @@ body {
       <div class="swiper-slide">
         <div class="page-single">
           <div class="swiper-zoom-container">
-            <img src="files/opuscolo/cover_front.jpg">
+            <img src="files/opuscolo/cover_front.jpg" alt="Copertina opuscolo" loading="eager" fetchpriority="high">
           </div>
         </div>
       </div>
 
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_02.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_03.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_04.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_05.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_06.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_07.jpg"></div></div></div>
-
-      <!-- DOPO SALTA ALLA 09 -->
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_09.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_10.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_11.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_12.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_13.jpg"></div></div></div>
-      <div class="swiper-slide"><div class="page-single"><div class="swiper-zoom-container"><img src="files/opuscolo/page_14.jpg"></div></div></div>
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_02.jpg" alt="Pagina 2" loading="eager">
+          </div>
+        </div>
+      </div>
 
       <div class="swiper-slide">
         <div class="page-single">
           <div class="swiper-zoom-container">
-            <img src="files/opuscolo/cover_back.jpg">
+            <img src="files/opuscolo/page_03.jpg" alt="Pagina 3" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_04.jpg" alt="Pagina 4" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_05.jpg" alt="Pagina 5" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_06.jpg" alt="Pagina 6" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_07.jpg" alt="Pagina 7" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_09.jpg" alt="Pagina 9" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_10.jpg" alt="Pagina 10" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_11.jpg" alt="Pagina 11" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_12.jpg" alt="Pagina 12" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_13.jpg" alt="Pagina 13" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_14.jpg" alt="Pagina 14" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/cover_back.jpg" alt="Retro copertina" loading="lazy">
           </div>
         </div>
       </div>
@@ -173,6 +259,8 @@ new Swiper('.swiper', {
   loop: false,
   spaceBetween: 16,
   autoHeight: true,
+  preloadImages: false,
+  lazy: false,
   zoom: {
     maxRatio: 4,
     minRatio: 1,
