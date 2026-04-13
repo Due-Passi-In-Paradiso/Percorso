@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <style>
-
 html, body {
   margin: 0;
   padding: 0;
@@ -17,17 +16,23 @@ html, body {
   color: #e5e7eb;
 }
 
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-y: auto;
+}
+
 .wrapper {
   max-width: 980px;
   margin: 0 auto;
-  padding: 16px 12px 24px;
+  padding: 16px 12px 28px;
   box-sizing: border-box;
 }
 
 /* SWIPER */
-
 .swiper {
   width: 100%;
+  overflow: hidden;
 }
 
 .swiper-slide {
@@ -36,32 +41,46 @@ html, body {
   align-items: flex-start;
 }
 
-/* PAGINE */
-
 .page-single {
   width: 100%;
 }
 
-/* ZOOM */
-
-.zoom-container {
-  overflow: hidden;
-  touch-action: none;
+/* ZOOM CONTAINER NATIVO SWIPER */
+.swiper-zoom-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  background: transparent;
 }
 
-.zoom-container img {
+.swiper-zoom-container img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* NAV */
-
+/* NAVIGAZIONE */
 .swiper-button-next,
 .swiper-button-prev {
   color: #ffffff;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 14px;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 .swiper-pagination-bullet {
@@ -75,10 +94,9 @@ html, body {
 }
 
 /* FOOTER */
-
 .footer {
   text-align: center;
-  margin-top: 18px;
+  margin-top: 4px;
 }
 
 .home-btn {
@@ -92,6 +110,22 @@ html, body {
   backdrop-filter: blur(8px);
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 12px 10px 24px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-pagination {
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+}
 </style>
 </head>
 
@@ -99,71 +133,153 @@ html, body {
 
 <div class="wrapper">
 
-<div class="swiper">
-<div class="swiper-wrapper">
+  <div class="swiper">
+    <div class="swiper-wrapper">
 
-<!-- COVER -->
-<div class="swiper-slide">
-  <div class="page-single zoom-container">
-    <img src="files/opuscolo/cover_front.jpg">
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/cover_front.jpg" alt="Copertina opuscolo">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_02.jpg" alt="Pagina 2">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_03.jpg" alt="Pagina 3">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_04.jpg" alt="Pagina 4">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_05.jpg" alt="Pagina 5">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_06.jpg" alt="Pagina 6">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_07.jpg" alt="Pagina 7">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/spread_08.jpg" alt="Mappa centrale">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_09.jpg" alt="Pagina 9">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_10.jpg" alt="Pagina 10">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_11.jpg" alt="Pagina 11">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_12.jpg" alt="Pagina 12">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_13.jpg" alt="Pagina 13">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/page_14.jpg" alt="Pagina 14">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="page-single">
+          <div class="swiper-zoom-container">
+            <img src="files/opuscolo/cover_back.jpg" alt="Retro copertina">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
   </div>
-</div>
 
-<!-- PAGINE -->
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_02.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_03.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_04.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_05.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_06.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_07.jpg"></div></div>
-
-<!-- MAPPA CENTRALE -->
-<div class="swiper-slide">
-  <div class="page-single zoom-container">
-    <img src="files/opuscolo/spread_08.jpg">
+  <div class="footer">
+    <a class="home-btn" href="index.html">← Torna alla home</a>
   </div>
-</div>
-
-<!-- ALTRE -->
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_09.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_10.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_11.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_12.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_13.jpg"></div></div>
-<div class="swiper-slide"><div class="page-single zoom-container"><img src="files/opuscolo/page_14.jpg"></div></div>
-
-<!-- BACK -->
-<div class="swiper-slide">
-  <div class="page-single zoom-container">
-    <img src="files/opuscolo/cover_back.jpg">
-  </div>
-</div>
 
 </div>
 
-<div class="swiper-pagination"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
-
-</div>
-
-<div class="footer">
-  <a class="home-btn" href="index.html">← Torna alla home</a>
-</div>
-
-</div>
-
-<!-- LIBRERIE -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom/dist/panzoom.min.js"></script>
-
 <script>
-
-// SWIPER
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   loop: false,
   spaceBetween: 16,
   autoHeight: true,
+  zoom: {
+    maxRatio: 4,
+    minRatio: 1,
+    toggle: false
+  },
   pagination: {
     el: '.swiper-pagination',
     clickable: true
@@ -173,28 +289,6 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev'
   }
 });
-
-// ZOOM
-const containers = document.querySelectorAll('.zoom-container');
-
-containers.forEach(container => {
-  const img = container.querySelector('img');
-
-  const panzoom = Panzoom(img, {
-    maxScale: 4,
-    minScale: 1,
-    contain: 'outside'
-  });
-
-  container.addEventListener('wheel', panzoom.zoomWithWheel);
-
-  container.addEventListener('touchstart', (e) => {
-    if (e.touches.length > 1) {
-      e.stopPropagation(); // evita conflitto con swipe
-    }
-  });
-});
-
 </script>
 
 </body>
