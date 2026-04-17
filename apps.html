@@ -15,6 +15,34 @@ padding:0;
 height:100%;
 }
 
+<script>
+async function downloadGPX(event) {
+  event.preventDefault();
+
+  const url = "https://raw.githubusercontent.com/due-passi-in-paradiso/Percorso/main/due-passi-in-paradiso.gpx";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Errore nel download del file GPX");
+
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = blobUrl;
+    a.download = "due-passi-in-paradiso.gpx";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(blobUrl);
+  } catch (error) {
+    alert("Non è stato possibile scaricare la traccia GPS.");
+    console.error(error);
+  }
+}
+</script>
+
 body{
 font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 background:#020617;
@@ -181,9 +209,8 @@ target="_blank" rel="noopener">
 </a>
 
 <!-- NUOVO PULSANTE GPS -->
-<a class="btn gps-download"
-href="https://raw.githubusercontent.com/due-passi-in-paradiso/Percorso/main/files/due-passi-in-paradiso-traccia-gps.gpx">
-⬇ Scarica la traccia GPS
+<a class="btn gps-download" href="#" onclick="downloadGPX(event)">
+⬇️ Scarica la traccia GPS
 </a>
 
 <div class="spacer"></div>
